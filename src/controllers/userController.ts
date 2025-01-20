@@ -1,4 +1,4 @@
-
+// The user controller has all the methods to handle user related operations such as getting all users, getting a user by ID, creating a user, updating a user, and deleting a user.
 import {Request,Response} from 'express';
 import mongoose from 'mongoose';
 import {User,Thought} from '../models/index.js';
@@ -68,11 +68,6 @@ export const updateUser = async (req: Request, res: Response) => {
   try {
     const userId = req.params.userId;
 
-    // Check if the provided ID is a valid ObjectId
-    // if (!mongoose.Types.ObjectId.isValid(userId)) {
-    //   return res.status(400).json({ message: 'Invalid user ID!' });
-    // }
-
     const user = await User.findOneAndUpdate(
       { _id: new mongoose.Types.ObjectId(userId) },
       { $set: req.body },
@@ -114,28 +109,6 @@ export const deleteuser = async (req: Request, res: Response) => {
     return res.status(500).json({ message: error.message });
   }
 }
-//   try {
-//     const { userId } = req.params;
-//     console.log(userId);
-
-//     // Validate if the userId is a valid ObjectId
-//     if (!mongoose.Types.ObjectId.isValid(userId)) {
-//       return res.status(400).json({ message: 'Invalid user ID' });
-//     }
-
-//     // Find the user by ID and delete it
-//     const user = await User.findByIdAndDelete(userId);
-
-//     // If no user is found, return a 404 error
-//     if (!user) {
-//       return res.status(404).json({ message: 'User not found' });
-//     }
-
-//     return res.status(200).json({ message: 'User deleted successfully' });
-//   } catch (error:any) {
-//     return res.status(500).json({ message: error.message });
-//   }
-// };
 
   export const addfriend = async (req: Request, res: Response) => {
       try {
