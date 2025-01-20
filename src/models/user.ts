@@ -38,7 +38,8 @@ const userSchema = new Schema<Iuser>(
     {
         toJSON:{
             virtuals:true,
-        } 
+        } ,
+        id: false,
     }    
 );
 
