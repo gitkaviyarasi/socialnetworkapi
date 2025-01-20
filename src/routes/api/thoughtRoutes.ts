@@ -1,5 +1,6 @@
 import { Router } from "express";
 const router = Router();
+// import controller functions for thought
 import { getThoughts,
     getThoughtById,
     createThought,

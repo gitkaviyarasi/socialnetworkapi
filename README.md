@@ -12,6 +12,7 @@ The application is built in typescript using Express.Js for routing, MongoDb for
   - [API routes.](#api-routes)
   - [Demo](#demo)
   - [License](#license)
+  - [Screenshot](#screenshot)
   - [Questions](#questions)
 
 ## Installation
@@ -48,7 +49,7 @@ e.DELETE to remove user by its _id  (it removes a user's associated thought also
 f.POST to add a new friend to a user's friend list
 g.DELETE to remove a friend from a user's friend list
 
-2. Thought routes - /api/thoughts
+2. Thought routes - `/api/thoughts`
 
 a.GET to get all thoughts
 b.GET to get a single thought by its _id
@@ -68,6 +69,9 @@ https://drive.google.com/file/d/1gsUiAsWF67xJUmzxHlE085MiuaD33pIU/view?usp=shari
 
 ## License
 MIT
+
+## Screenshot
+![insomnia testing routes] (./assets/Screenshot 2025-01-20 000410.png)
 
 ## Questions
 If you have any questions about this project, feel free to reach out:

@@ -1,4 +1,5 @@
 import { Schema, Types } from 'mongoose';
+// reaction has only scehma and interface since it is a subdocument of thought.
 
 interface IReaction {
     reactionId: Types.ObjectId;
